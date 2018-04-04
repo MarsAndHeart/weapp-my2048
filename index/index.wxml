@@ -1,0 +1,16 @@
+<view class="intro" bindtouchstart='touchStart' bindtouchend='touchEnd'>
+
+  <view class='score'>当前分数:{{score}}</view>
+
+  <view class='main'>
+    <view class='{{"cell cell-"+item.num}}' wx:for-items="{{list}}" wx:key="{{}}">
+      {{item.num === 0 ? '' : item.num}}
+    </view>
+  </view>
+
+  <view wx:if="{{gameOver}}" class='mask'>
+    <view class='gameOver'>GAME OVER</view>
+    <view class='restart' bindtap="restart">重新开始</view>
+  </view>
+
+</view>

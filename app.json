@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#F4F4F4",
+    "navigationBarTitleText": "My2048",
+    "navigationBarTextStyle":"black"
+  }
+}
