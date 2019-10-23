@@ -22,10 +22,6 @@ const defaultList = [
   { id: 15, row: 3, column: 3, num: 0 },
 ];
 
-const numbers = [
-  2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192
-]
-
 Page({
 
   data: {
@@ -145,7 +141,6 @@ Page({
 
   //移动并合并格子
   moveAndCombine: function (direction = '') {
-    console.log(direction)
 
     this.moveCells(direction);
     this.combineCells(direction);
@@ -177,9 +172,12 @@ Page({
             if (currentCell.num !== 0) {
               let lastCell = currentRow.find(ele => ele.column === c - 1);
               if (lastCell.num === 0) {
+                this.createMoveAnima(currentCell,lastCell,currentCell.num)
+
                 lastCell.num = currentCell.num;
                 currentCell.num = 0;
                 c--;
+
                 continue;
               }
             }
@@ -403,6 +401,17 @@ Page({
     })
   },
 
+  createMoveAnima: function (fromCell,toCell,num) {
+    const obj = {
+      fromX: fromCell.row,
+      fromY: fromCell.column,
+      toX: toCell.row,
+      toY: toCell.column,
+      num: num
+    }
+    console.log(obj)
+  },
+
   //结束
   gameOver: function () {
     this.setData({
@@ -413,6 +422,7 @@ Page({
   //重新开始
   restart: function () {
     this.setData({
+      score: 0,
       gameOver: false,
     })
     this.resetList();

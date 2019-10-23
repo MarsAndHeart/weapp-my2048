@@ -6,7 +6,8 @@
 }
 
 .score {
-  padding:5vw;
+  padding: 5vw;
+  height: 5vw;
 }
 
 .main {
@@ -33,23 +34,43 @@
 }
 
 .cell-2 {
-  background-color: #ccc;
+  background-color: #EFB2B9;
 }
 
 .cell-4 {
-  background-color: #bbb;
+  background-color: #EFAFAA;
 }
 
 .cell-8 {
-  background-color: #aaa;
+  background-color: #F5C5B3;
 }
 
-.cell-16, .cell-32, .cell-64, .cell-128, .cell-256, .cell-512 {
-  background-color: #999;
+.cell-16 {
+  background-color: #DAEAB2;
+}
+
+.cell-32 {
+  background-color: #F39C43;
+}
+
+.cell-64 {
+  background-color: #FAEE8E;
+}
+
+.cell-128 {
+  background-color: #9D8527;
+}
+
+.cell-256 {
+  background-color: #DF5625;
+}
+
+.cell-512 {
+  background-color: #D4A8C8;
 }
 
 .cell-1024, .cell-2048 {
-  background-color: #888;
+  background-color: #782259;
   font-size: 5vw;
 }
 
@@ -61,7 +82,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
 }
 
@@ -71,7 +92,7 @@
   margin-top: 30vh;
   height: 15vw;
   color: orange;
-  text-shadow: 0 0 2vw white;
+  text-shadow: 0 0 10vw white;
 }
 
 .restart {
@@ -80,9 +101,25 @@
   color: white;
   font-size: 5vw;
   height: 10vw;
-  width:30vw;
+  width: 30vw;
   margin-left: 35vw;
   line-height: 10vw;
   border-radius: 5vw;
   box-shadow: 0 0 1vw white;
+}
+
+.test {
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  background-color: rgba(0,0,0,0.5);
+  left: 7vw;
+  top: 22vw;
+	animation:testAnima 3s;
+}
+
+@keyframes testAnima
+{
+	0%   {left:74vw; top:22vw;}
+	100%   {left:7vw; top:22vw;}
 }
